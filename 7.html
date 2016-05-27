@@ -93,7 +93,7 @@
             reject(value)
     })
 
-    p.then(a, b).then(a, b).then(a, b).then(function(){
+    p.then(a, b).then(a, b).then(a, b).then(function(v){
         console.log('now we throw an error')
         throw 'error'
     }).catch(function(e){
@@ -102,9 +102,9 @@
             resolve('resolve the error i throwed')
         })
     }).then(function(v){
-        console.log(v)
+        console.log('in fullfill: ',v)
     },function(e){
-        console.log(e)
+        console.log('in reject: ',e)
     })
 
     function a(v) {
