@@ -124,5 +124,5 @@
         })
         return p
     }
-    global.Promise = Promise
+    global.Pr1omise = Promise
 })(this)
